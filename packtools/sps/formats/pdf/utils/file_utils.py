@@ -102,9 +102,6 @@ def resolve_asset_path(href, assets_dir=None):
     - If assets_dir is provided and contains the relative file, return the joined path.
     - Otherwise return the href unchanged (caller may handle it later).
     """
-    if not href:
-        return None
-    
     href = str(href)
     if href.startswith('http://') or href.startswith('https://'):
         return href
